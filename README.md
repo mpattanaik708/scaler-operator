@@ -1,8 +1,8 @@
 ## scaler-operator
-// TODO(user): Add simple overview of use/purpose
+ Create a hourly based up/down scaler operator
 
 ## Description
-// TODO(user): An in-depth paragraph about your project and overview of use
+ Create a hourly up/down scaler operator
 
 ## Getting Started
 

@@ -1,8 +1,11 @@
----
+# permissions for end users to edit scalers.
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
 metadata:
-  name: manager-role
+  labels:
+    app.kubernetes.io/name: scaler-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: scaler-editor-role
 rules:
 - apiGroups:
   - api.manojakumar.online
@@ -19,14 +22,6 @@ rules:
 - apiGroups:
   - api.manojakumar.online
   resources:
-  - scalers/finalizers
-  verbs:
-  - update
-- apiGroups:
-  - api.manojakumar.online
-  resources:
   - scalers/status
   verbs:
   - get
-  - patch
-  - update
